@@ -1,0 +1,31 @@
+1. download Cygwin 2.2.1 (https://www.cygwin.com/, either 32 or 64 bit)
+2. install Cygwim with the all the default selected modules
+3. install git (rerun the setup, choose "git" to install, the following installation can be done via the same way)
+4. install gcc-g++ 4.9.2-1
+
+5. download source code of crypto++ from https://github.com/weidai11/cryptopp (latest commit aff5105569)
+   or https://github.com/cawka/cryptopp-1 (latest commit 9425e16437)
+   or download crypto++ 5.6.2 from http://www.cryptopp.com/ (if you are using x86_64 version Sygwim, follow this page (http://stackoverflow.com/questions/21503467/building-crypto-5-6-2-with-cygwin-x86-64) to make some change to the files.)
+6. install make 4.1-1
+7. go into the crypto directory, run the command "make libcryptopp.so"
+8. switch to /uer/lib directory, run the command "mv libcryptopp.so libcryptopp.so"
+
+9. install libboost-devel 1.57.0-1
+
+10. download ndn-cxx code
+11. then configure, compile and install it
+12. copy all the dll files from /usr/local/lib to /usr/lib
+
+13. install pkg-config
+14. download NFD code, go into the NFD directory
+15. run "git submodule init && git submodule update" to install the websocket module
+16. run "./waf configure --without-libpcap", then configure and install it
+
+17. cp /usr/local/etc/ndn/nfd.conf.sample /usr/local/etc/ndn/nfd.conf, and comment unix in face_system, disable all multicast and ipv6
+18. go into /usr/lib directory to start nfd
+
+ISSUE: the registration Interest cannot be parsed correctly "Received unrecognized TLV block of type 5"
+
+
+
+
