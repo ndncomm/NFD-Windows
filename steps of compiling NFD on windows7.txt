@@ -3,9 +3,9 @@
 3. install git (rerun the setup, choose "git" to install, the following installation can be done via the same way)
 4. install gcc-g++ 4.9.2-1
 
-5. download source code of crypto++ from https://github.com/weidai11/cryptopp (latest commit aff5105569)
-   or https://github.com/cawka/cryptopp-1 (latest commit 9425e16437)
-   or download crypto++ 5.6.2 from http://www.cryptopp.com/ (if you are using x86_64 version Sygwim, follow this page (http://stackoverflow.com/questions/21503467/building-crypto-5-6-2-with-cygwin-x86-64) to make some change to the files.)
+5. (1) download source code of crypto++ from https://github.com/weidai11/cryptopp (latest commit aff5105569)
+   (2) or https://github.com/cawka/cryptopp-1 (latest commit 9425e16437)
+   (3) or download crypto++ 5.6.2 from http://www.cryptopp.com/ (for the third one, if you are using x86_64 version Sygwim, follow this page (http://stackoverflow.com/questions/21503467/building-crypto-5-6-2-with-cygwin-x86-64) to make some change to the files.)
 6. install make 4.1-1
 7. go into the crypto directory, run the command "make libcryptopp.so"
 8. switch to /uer/lib directory, run the command "mv libcryptopp.so libcryptopp.so"
@@ -24,7 +24,7 @@
 17. cp /usr/local/etc/ndn/nfd.conf.sample /usr/local/etc/ndn/nfd.conf, and comment unix in face_system, disable all multicast and ipv6
 18. go into /usr/lib directory to start nfd
 
-ISSUE: the registration Interest cannot be parsed correctly "Received unrecognized TLV block of type 5"
+Reminder: after updating ndn-cxx, do not forget to copy the dll file from /usr/local/lib to /usr/lib again!!!
 
 
 
