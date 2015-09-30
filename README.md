@@ -1,9 +1,9 @@
 # NFD-Windows
-<1> Project goal: Run NFD on Windows
+#1 Project goal: Run NFD on Windows
 
 This implies: NFD dependencies should also work on Windows, including: ndn-cxx, Boost, sqlite3, CryptoPP.
 
-<2> Current status
+#2 Current status
 
 (1) Cygwin
 
